@@ -6,7 +6,7 @@
 #    By: abremont <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 10:47:12 by abremont          #+#    #+#              #
-#    Updated: 2024/01/23 12:49:53 by abremont         ###   ########.fr        #
+#    Updated: 2024/01/24 13:28:45 by abremont         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CFLAGS		=	-Wall -Wextra -Werror -MMD -MP -I./includes -g3
 
 LIB		=	-Llibft/ -lft -Lminilibx-linux -lmlx -lX11 -lXext
 
-SRCS		=
+SRCS		=	init.c \
 
 OBJS		:=	${addprefix ./obj/,${SRCS:%.c=%.o}}
 
@@ -31,19 +31,22 @@ all: ${NAME}
 
 ./obj/%.o: ./src/%.c
 	@mkdir -p $(@D)
-	@make -C minilibx-linux
-	@make -C libft
+#	@make -C minilibx-linux
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-${NAME}: ${OBJS} ./libft/libft.a
+${NAME}: ./libft/libft.a ./minilibx-linux/libmlx.a ${OBJS}
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIB)
 
-#./libft/libft.a:
-#	make $(@F) -C $(@D)
+./libft/libft.a:
+	make $(@F) -C $(@D)
+
+./minilibx-linux/libmlx.a:
+	make -C $(@D) -f Makefile.gen all
 clean:
 	@rm -rf obj/
 	@rm -f ${OBJS}
 	@make $@ -C ./libft/
+	@make $@ -C ./minilibx-linux/
 
 fclean:
 	@rm -rf obj/

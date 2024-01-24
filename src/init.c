@@ -6,12 +6,12 @@
 /*   By: abremont <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 13:49:38 by abremont          #+#    #+#             */
-/*   Updated: 2024/01/23 11:56:34 by abremont         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:12:53 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../minilibx-linux/mlx.h"
-
+//#include "../includes/so_long.h"
 int	main(void)
 {
 	void	*mlx;

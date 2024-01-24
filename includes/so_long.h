@@ -6,7 +6,7 @@
 /*   By: abremont <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:50:21 by abremont          #+#    #+#             */
-/*   Updated: 2024/01/23 12:50:38 by abremont         ###   ########.fr       */
+/*   Updated: 2024/01/24 14:30:35 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,17 @@
 # include <X11/Xutil.h>
 # include <stdbool.h>
 
+typedef struct s_data
+{
+	void	*mlx;
+	void	*win;
+	void	*p;
+	void	*c;
+	void	*e;
+	void	*w;
+	char	**map;
+	int	p_count;
+	int	c_count;
+	int	e_count;
+} t_data
 #endif
