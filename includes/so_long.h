@@ -6,7 +6,7 @@
 /*   By: abremont <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:50:21 by abremont          #+#    #+#             */
-/*   Updated: 2024/01/24 14:30:35 by abremont         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:03:03 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 # define SO_LONG_H
 
 # include <stdlib.h>
+# include <fcntl.h>
 # include <stdio.h>
 # include "../libft/libft.h"
-# include "../libft/get_next_line.h"
 # include "../minilibx-linux/mlx.h"
 # include <X11/Xlib.h>
 # include <X11/Xutil.h>
@@ -31,8 +31,13 @@ typedef struct s_data
 	void	*e;
 	void	*w;
 	char	**map;
+	int	width;
+	int	height;
 	int	p_count;
 	int	c_count;
 	int	e_count;
-} t_data
+} t_data;
+
+char	**extract_map(int fd);
+void    init_struct(t_data *data);
 #endif

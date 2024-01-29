@@ -6,11 +6,11 @@
 /*   By: abremont <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 11:38:18 by abremont          #+#    #+#             */
-/*   Updated: 2024/01/10 14:47:43 by abremont         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:09:40 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 char	*read_to_stash(int fd, char *stash)
 {
@@ -114,7 +114,7 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
-
+/*
 #include<stdio.h>
 #include<fcntl.h>
 int	main(void)
@@ -133,4 +133,4 @@ int	main(void)
 	}
 	close(fd1);
 	return (0);
-}
+}*/

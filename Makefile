@@ -6,7 +6,7 @@
 #    By: abremont <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 10:47:12 by abremont          #+#    #+#              #
-#    Updated: 2024/01/24 13:28:45 by abremont         ###   ########.fr        #
+#    Updated: 2024/01/26 16:48:37 by abremont         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,11 @@ CC		=	cc
 CFLAGS		=	-Wall -Wextra -Werror -MMD -MP -I./includes -g3
 # -Lminilibx-linux -lmlx -lX11 -lXext -MMD -MP -I./includes -g3
 
-LIB		=	-Llibft/ -lft -Lminilibx-linux -lmlx -lX11 -lXext
+LIB		=	-Llibft/ -lft -Lminilibx-linux -lmlx -lm -lX11 -lXext
 
 SRCS		=	init.c \
+			extract_map.c \
+			parsing_utils.c \
 
 OBJS		:=	${addprefix ./obj/,${SRCS:%.c=%.o}}
 

@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   parsing_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abremont <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 13:49:38 by abremont          #+#    #+#             */
-/*   Updated: 2024/01/26 16:42:33 by abremont         ###   ########.fr       */
+/*   Created: 2024/01/26 16:07:20 by abremont          #+#    #+#             */
+/*   Updated: 2024/01/26 16:12:00 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-int	init_win(t_data *data)
+void	init_struct(t_data *data)
 {
-	data->win = mlx_new_window(data->mlx, (data->width) * 64, 
-			(data->height) * 64, "so_long");
-	if (data->win == NULL)
-		return (0);
-	return (1);
+	data->mlx = NULL;
+	data->win = NULL;
+	data->p = NULL;
+	data->c = NULL;
+	data->e = NULL;
+	data->w = NULL;
+	data->map = NULL;
+	data->width = 0;
+	data->height = 0;
+	data->p_count = 0;
+	data->c_count = 0;
+	data->e_count = 0;
 }
-/*
-int	init_img(t_data *data)
-{
-	data.img = mlx_new_image(data.mlx, (data.width) * 64, (data.height) * 64);
-	data.p = 
-	data.c =
-	data.e = 
-	data.w = 
-
-}
-
-int	main(void)
-{
-	void	*mlx;
-
-	mlx = mlx_init();
-}*/
