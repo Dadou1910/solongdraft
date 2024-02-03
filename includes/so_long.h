@@ -6,7 +6,7 @@
 /*   By: abremont <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:50:21 by abremont          #+#    #+#             */
-/*   Updated: 2024/01/26 17:03:03 by abremont         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:12:35 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ typedef struct s_data
 	int	e_count;
 } t_data;
 
-char	**extract_map(int fd);
-void    init_struct(t_data *data);
+char	**extract_map1(t_data *data);
+int	check_map(t_data *data);
+void	fl(char **map, int i, int j);
+void	init_struct(t_data *data);
+int	nb_lines_map(t_data *data);
+int	check_walls(t_data *data);
 #endif

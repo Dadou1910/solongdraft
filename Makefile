@@ -6,7 +6,7 @@
 #    By: abremont <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 10:47:12 by abremont          #+#    #+#              #
-#    Updated: 2024/01/26 16:48:37 by abremont         ###   ########.fr        #
+#    Updated: 2024/02/01 11:34:21 by abremont         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ LIB		=	-Llibft/ -lft -Lminilibx-linux -lmlx -lm -lX11 -lXext
 SRCS		=	init.c \
 			extract_map.c \
 			parsing_utils.c \
+			parsing_utils2.c \
+			parsing_utils3.c
 
 OBJS		:=	${addprefix ./obj/,${SRCS:%.c=%.o}}
 

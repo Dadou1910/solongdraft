@@ -6,7 +6,7 @@
 /*   By: abremont <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 13:49:38 by abremont          #+#    #+#             */
-/*   Updated: 2024/01/26 16:42:33 by abremont         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:25:17 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	init_win(t_data *data)
 {
-	data->win = mlx_new_window(data->mlx, (data->width) * 64, 
+	data->win = mlx_new_window(data->mlx, (data->width) * 64,
 			(data->height) * 64, "so_long");
 	if (data->win == NULL)
 		return (0);
